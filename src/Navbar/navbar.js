@@ -637,7 +637,7 @@ function search(){
             </li>
             {/* 7th Box */}
             <li 
-          
+           
             className="main-box">
               <a   onClick={handleOpen} className="name-tag">{userName==""?`Sign Up/Login`:userName}</a>
 
