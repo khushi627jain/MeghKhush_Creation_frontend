@@ -342,7 +342,7 @@ setCartArr(newArr);
     };
 
     return(
-<Box bg="#eaeded" >
+<Box bg="#eaeded" mt="100px" >
         {
             cartArr.length==0?<Heading>OOPS !! No item in cart</Heading>: 
             <>

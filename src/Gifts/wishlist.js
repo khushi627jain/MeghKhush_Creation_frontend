@@ -51,7 +51,7 @@ setwishlistArr(wishlist)
      setChange(true);
 }
     return(
-<Box>
+<Box  mt="100px">
         {
             wishlistArr.length==0?<Heading>OOPS !! No item in wishlist</Heading>: <Box>
 

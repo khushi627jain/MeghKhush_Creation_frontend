@@ -235,7 +235,7 @@ export default function GiftDetails() {
       
     return (
       <>
-        <Box display={"flex"} fontStyle={"revert-layer"} fontFamily={"revert-layer"} p="10px">
+        <Box mt="100px" display={"flex"} fontStyle={"revert-layer"} fontFamily={"revert-layer"} p="10px">
             <Box w={["60%","50%","40%"]}
               >
               {

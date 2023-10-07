@@ -258,7 +258,7 @@ function handleVideo(){
     </ModalFooter>
   </ModalContent>
 </Modal>
-
+<Box mt="80px">
 <Button mt="20px" onClick={()=>navigate("/edit")}>Show All Products</Button>
 
 <Box w="80%" m="auto" textAlign={"left"}>
@@ -354,7 +354,7 @@ function handleVideo(){
 
 </Box>
 
-
+</Box>
 
 
 

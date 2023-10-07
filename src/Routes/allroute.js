@@ -11,7 +11,7 @@ import { Dashboard } from "../dashboard/dashboard";
 import EditAndDelete from "../dashboard/edit&delete";
 import NamePlate from "../nameplate/nameplate";
 import AllCategory from "../Gifts/category";
-
+ 
 
 export default function AllRouter(){
 return(

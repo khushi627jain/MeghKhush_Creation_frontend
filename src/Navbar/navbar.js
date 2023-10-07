@@ -359,12 +359,12 @@ function search(){
   navigate(`/search/${searchValue}`)
   setSearchValue("")
 
-}
+} 
 
 
   return (
     <>
-<Box className="navbar-new" >
+<Box className="navbar-new"  >
       <Box className="navbar">
         <Box gap={["5px","20px","0px"]} className="navbar-1">
           <Box className="logo-etsy">

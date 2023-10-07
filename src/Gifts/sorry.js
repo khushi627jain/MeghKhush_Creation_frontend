@@ -7,7 +7,7 @@ export default function Sorry(){
 
 
     return(
-        <Box fontStyle={"revert-layer"} w="80%" m="auto" display={["grid","flex"]} alignItems={"center"} justifyContent={"center"} mt="8%"  >
+        <Box fontStyle={"revert-layer"} w="80%" m="150px auto" display={["grid","flex"]} alignItems={"center"} justifyContent={"center"}   >
         <Box m="auto" w="30%">
             <Image src="https://media.tenor.com/GCAp1T2fAZwAAAAi/sorry-im-sorry.gif" />
         </Box>

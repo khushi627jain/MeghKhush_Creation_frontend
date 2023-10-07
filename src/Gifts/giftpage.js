@@ -246,7 +246,7 @@ setFilteredData((prev)=>({
 
 return( 
     <>
- <Box fontFamily={"revert-layer"} display={["grid","grid","flex"]} gap="10px" p="10px" m="auto">
+ <Box fontFamily={"revert-layer"} display={["grid","grid","flex"]} gap="10px" p="10px" m="100px auto">
     <Box w={["0","0","30%","30%","21%"]} display={["none","none","block"]}   textAlign={"left"} p="10px">
  <Text color={"#fa4a6f"}  fontWeight={"500"} mt="10px" mb="5px" align={"left"} cursor={"pointer"} onClick={changeClearFilters}>Clear filters</Text>
 <Select mb="10px" placeholder="Sort by price" value={filterData.priceType}

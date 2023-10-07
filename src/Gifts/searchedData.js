@@ -228,7 +228,7 @@ return(
 fontFamily="sans-serif" 
       bgPosition="center"
       pt="150px" pb="150px"
-      minH="auto"
+      minH="auto" mt="100px"
 bgImage={"https://images.unsplash.com/photo-1614850523296-d8c1af93d400?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"}>
   <Text fontSize={["3xl"]} >
   Apologies, but it seems that our search came up empty-handed for {query}.
@@ -239,7 +239,7 @@ bgImage={"https://images.unsplash.com/photo-1614850523296-d8c1af93d400?ixlib=rb-
 
 
   </>:(
-    <Box fontFamily={"revert-layer"} display={["grid","grid","flex"]} gap="10px" p="10px">
+    <Box mt="100px" fontFamily={"revert-layer"} display={["grid","grid","flex"]} gap="10px" p="10px">
        <Box w={["0","0","30%","30%","21%"]} display={["none","none","block"]}   textAlign={"left"} p="10px">
     <Text color={"#fa4a6f"}  fontWeight={"500"} mt="10px" mb="5px" align={"left"} cursor={"pointer"} onClick={changeClearFilters}>Clear filters</Text>
    <Select mb="10px" placeholder="Sort by price" value={filterData.priceType}

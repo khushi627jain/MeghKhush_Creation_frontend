@@ -198,7 +198,7 @@ onOpen();
 
     return (
         <>
-            <Box fontFamily={"revert-layer"} display={["grid", "grid", "flex"]} gap="10px" p="10px" m="auto">
+            <Box fontFamily={"revert-layer"} display={["grid", "grid", "flex"]} gap="10px" p="10px" m="100px auto">
                 <Box display={"grid"} justifyContent={"center"} w="100%">
                     <Grid
                         display="grid" gridTemplateColumns={["repeat(1,1fr)", "repeat(2,1fr)", "repeat(3,1fr)", "repeat(3,1fr)", "repeat(4,1fr)"]}
@@ -214,7 +214,8 @@ onOpen();
                                         <Image
                                             // w="100%" h="350px" 
                                             onClick={() => { navigate(`/gift/single/${ele._id}`) }}
-                                            w={["100%", "100%", "100%", "260px", "320px"]} h={["fit-content", "360px", "380px", "310px", "350px"]}
+                                            // w={["100%", "100%", "100%", "260px", "320px"]} h={["fit-content", "360px", "380px", "310px", "350px"]}
+                                          h="50%"
                                             borderRadius={"10px 10px 0px 0px"} src={ele.image[0]} />
                                         <Box p="10px">
                                             <Box w={["200px", "200px", "250px"]}>
