@@ -364,7 +364,7 @@ function search(){
 
   return (
     <>
-
+<Box className="navbar-new" >
       <Box className="navbar">
         <Box gap={["5px","20px","0px"]} className="navbar-1">
           <Box className="logo-etsy">
@@ -716,6 +716,7 @@ function search(){
 
 
 
+      </Box>
       </Box>
       <hr style={{ marginTop: "10px" }} />
     </>

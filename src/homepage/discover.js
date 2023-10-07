@@ -11,12 +11,12 @@ export default function Discover() {
   
     const navigate=useNavigate();
     return (
-        <Box fontStyle={"revert-layer"}>
-            <Box bg="pink.100" h="200px" w="100%">
+        <Box  fontStyle={"revert-layer"}>
+            <Box bg="pink.100" h="250px" w="100%">
 
             </Box>
-            <Box mt="-165px" >
-                <Text fontSize={"3xl"} mb="20px" fontStyle={"revert-layer"}>Discover one-of-a-kind items from our shop</Text>
+            <Box mt="-140px" >
+                <Text fontSize={"3xl"} mb="20px" mt="5px" fontStyle={"revert-layer"}>Discover one-of-a-kind items from our shop</Text>
                 <Grid 
                     templateColumns={["repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(3, 1fr)", "repeat(6, 1fr)", "repeat(6, 1fr)"]}
                      justifyContent="center"
