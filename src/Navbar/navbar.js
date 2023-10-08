@@ -38,6 +38,7 @@ const toast = useToast()
   const[userName,setUsername]=useState("");
   const[searchValue,setSearchValue]=useState("")
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const[isOpenLoginBox,setIsOpenLoginBox]=useState(false)
 
   const firstField = React.useRef()
 
@@ -345,11 +346,11 @@ function logOut(){
               margin:"auto"
             }}
           >
-            You are successfully logout
+           You have been successfully logout.
           </Box>
         )
         })
-    
+        setIsOpenLoginBox(false);
   
 }
 
@@ -422,12 +423,43 @@ function search(){
               initialFocusRef={initialFocusRef}
               placement='bottom'
               closeOnBlur={true}
+              isOpen={isOpenLoginBox}
+      onClose={() => setIsOpenLoginBox(false)}
               w="100%"
             >
-              <PopoverTrigger>
-                <i class="fa-solid fa-caret-down"></i>
+              <PopoverTrigger >
+                <i onClick={()=>setIsOpenLoginBox(true)} class="fa-solid fa-caret-down"></i>
               </PopoverTrigger>
-              <PopoverContent border={"none"} color='black' bg='white' w="100%" >
+             {userName==""?<PopoverContent border={"none"} color='black' bg='white' w="100%" >
+                <PopoverHeader pt={4} border='0' _hover={{ bg: "#d3d3d3" }} >
+                  <PopoverArrow bg='white' />
+                </PopoverHeader>
+                <PopoverArrow bg='blue.800' />
+                <PopoverCloseButton />
+                <PopoverBody w="100%" m="auto" justifyContent={"center"} textAlign={"center"} border={"none"} p="0px">
+                  <Box _hover={{ bg: "#d3d3d3" }} alignItems="center" justifyContent={"center"} pt="10px" display={"flex"} m="auto" >
+                    <Box alignItems="center" justifyContent={"center"} gap={"15px"}  display={"flex"}>
+                      <Box p="0 20px" alignItems="center" justifyContent={"center"}  >
+                     
+                        <Button color={"white"} bg="black" _hover={{boxShadow:"2px 2px  4px #fa4a56"}} align={"center"} onClick={handleOpenLogin}>Login</Button>
+                     <Text fontSize={"x-small"} color={"gray"}>Please login for accessing your profile.</Text>
+                    </Box>
+                    </Box>
+                   
+                  </Box>
+                </PopoverBody>
+                <PopoverFooter
+                  border='0'
+                  display='flex'
+                  alignItems='center'
+                  justifyContent='space-between'
+                  pb={4}
+                >
+
+                </PopoverFooter>
+              </PopoverContent>
+              :
+             <PopoverContent border={"none"} color='black' bg='white' w="100%" >
                 <PopoverHeader pt={4} border='0' _hover={{ bg: "#d3d3d3" }} >
                   <PopoverArrow bg='white' />
                   <Box mt="15px" gap={"10px"} display={"flex"} justifyContent={"center"} alignItems={"center"}>
@@ -471,7 +503,7 @@ function search(){
                 >
 
                 </PopoverFooter>
-              </PopoverContent>
+              </PopoverContent>} 
             </Popover>
 
 
