@@ -7,7 +7,7 @@ import GiftMain from "./giftMain";
 
 export default function Gift(){
 return(
-    <Box>
+    <Box m="100px auto">
     <GiftMain/>
         <Category/>
 <TopRated/>
