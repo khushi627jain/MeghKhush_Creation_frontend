@@ -256,9 +256,10 @@ function handleMouseLeave(id){
   export function Rewards(){
     return(
       <>
-      <Box  borderTop={"2px solid gray"}  ></Box>
-<Box display={"grid"} rowGap={"30px"} justifyContent={"center"} m={"auto"} gridTemplateColumns={["repeat(1,1fr)","repeat(2,1fr)","repeat(3,1fr)","repeat(4,1fr)","repeat(4,1fr)"]}
-        w="100%" ml="10px"   pt="40px" pb="40px"  >
+      <Box  borderTop={"2px solid gray"} right={0} ></Box>
+<Box display={"grid"} rowGap={"30px"} justifyContent={"center"} m={"auto"}
+ gridTemplateColumns={["repeat(1,1fr)","repeat(2,1fr)","repeat(3,1fr)","repeat(4,1fr)","repeat(4,1fr)"]}
+        w="100%"  pt="40px" pb="40px"  >
       <Box  display={"flex"}  gap={"20px"}>
           
      <LiaShippingFastSolid fontSize={"60px"} color='#d51f36'/>
@@ -279,7 +280,6 @@ function handleMouseLeave(id){
       </Box>
       <Box display={["none","","block","",""]} borderLeft={"2px solid gray"}  height={"100px"}></Box>
       </Box>
-
     
       <Box display={"flex"} gap={"20px"}>
          
@@ -291,7 +291,6 @@ function handleMouseLeave(id){
       <Box display={["none","block","none","block","block"]} borderLeft={"2px solid gray"}  height={"100px"}></Box>
       </Box>
 
-     
       <Box  display={"flex"} gap={"20px"}>
      
           <BsPhoneVibrate fontSize={"60px"} color="#d51f36"/>

@@ -365,8 +365,8 @@ function search(){
 
   return (
     <>
-<Box className="navbar-new"  >
-      <Box className="navbar">
+<Box className="navbar-new" >
+      <Box className="navbar"  >
         <Box gap={["5px","20px","0px"]} className="navbar-1">
           <Box className="logo-etsy">
             <Heading cursor={"pointer"} color="#fa4a6f" onClick={()=>navigate("/")} fontFamily={"cursive"}
@@ -375,21 +375,26 @@ function search(){
           </Box>
           <Box display={["none","none","flex"]} className="searchBar">
             <Box className="search-input-box">
-              <Input onKeyPress={(e)=>{if(e.key=="Enter") search()}} value={searchValue} onChange={(e)=>setSearchValue(e.target.value)} border={"none"} _focus={{ boxShadow: 'none', }} _hover={{ border: 'none' }} placeholder="Search for anything" />
+              <Input onKeyPress={(e)=>{if(e.key=="Enter") search()}} value={searchValue}
+               onChange={(e)=>setSearchValue(e.target.value)} border={"none"}
+                _focus={{ boxShadow: 'none', }} _hover={{ border: 'none' }} 
+                placeholder="Search for anything" />
             </Box>
             <Box className="search-logo" >
               <i onClick={search} class="fa-solid fa-magnifying-glass"></i>
             </Box>
           </Box>
           <Spacer display={["block","block","none"]}/>
-          <Tooltip hasArrow label='Favourites' bg='#333f48' p="10px" borderRadius={"10px"} color='white'>
+          <Tooltip hasArrow label='Favourites' bg='#333f48' p="10px"
+           borderRadius={"10px"} color='white'>
             <Box onClick={wishlistHandel} className="favourite">
               <i id="navbar-logo" class="fa-regular fa-heart"></i>
             </Box>
           </Tooltip>
 
           <Box className="updates">
-            <Tooltip hasArrow label='Updates' bg='#333f48' p="10px" borderRadius={"10px"} color='white'>
+            <Tooltip hasArrow label='Updates' bg='#333f48' p="10px"
+             borderRadius={"10px"} color='white'>
               <i id="navbar-logo" class="fa-sharp fa-regular fa-bell"></i>
             </Tooltip>
 
@@ -401,7 +406,8 @@ function search(){
                 <PopoverHeader fontWeight='semibold'>Updates</PopoverHeader>
                 <PopoverArrow bg='white' />
                 {/* <PopoverCloseButton bg='purple.500' /> */}
-                <PopoverBody pt="10px" pb="10px" textAlign={"left"} bg="#f4f4f4" _hover={{ bg: "#d4d4d4", border: "none" }} border="none">
+                <PopoverBody pt="10px" pb="10px" textAlign={"left"} bg="#f4f4f4"
+                 _hover={{ bg: "#d4d4d4", border: "none" }} border="none">
                   <Text>Your first update!</Text>
                   Look here for updates on items and shops you've favourited – sales, new products and more.
                 </PopoverBody>
@@ -413,7 +419,8 @@ function search(){
 
 
           <Box className="account">
-            <Tooltip hasArrow label='Your Account' bg='#333f48' p="10px" borderRadius={"10px"} color='white'>
+            <Tooltip hasArrow label='Your Account' bg='#333f48' p="10px" 
+            borderRadius={"10px"} color='white'>
               <Box className="profile-user">
                 <i id="navbar-logo" class="fa-sharp fa-solid fa-user"></i>
               </Box>
@@ -441,7 +448,8 @@ function search(){
                     <Box alignItems="center" justifyContent={"center"} gap={"15px"}  display={"flex"}>
                       <Box p="0 20px" alignItems="center" justifyContent={"center"}  >
                      
-                        <Button color={"white"} bg="black" _hover={{boxShadow:"2px 2px  4px #fa4a56"}} align={"center"} onClick={handleOpenLogin}>Login</Button>
+                        <Button color={"white"} bg="black" _hover={{boxShadow:"2px 2px  4px #fa4a56"}}
+                         align={"center"} onClick={handleOpenLogin}>Login</Button>
                      <Text fontSize={"x-small"} color={"gray"}>Please login for accessing your profile.</Text>
                     </Box>
                     </Box>
@@ -462,7 +470,8 @@ function search(){
              <PopoverContent border={"none"} color='black' bg='white' w="100%" >
                 <PopoverHeader pt={4} border='0' _hover={{ bg: "#d3d3d3" }} >
                   <PopoverArrow bg='white' />
-                  <Box mt="15px" gap={"10px"} display={"flex"} justifyContent={"center"} alignItems={"center"}>
+                  <Box mt="15px" gap={"10px"} display={"flex"} justifyContent={"center"}
+                   alignItems={"center"}>
                     <Box>
                       <Box className="profile-user">
                         <i id="navbar-logo" class="fa-sharp fa-solid fa-user"></i>
@@ -479,8 +488,10 @@ function search(){
                 </PopoverHeader>
                 <PopoverArrow bg='blue.800' />
                 <PopoverCloseButton />
-                <PopoverBody w="100%" m="auto" justifyContent={"center"} textAlign={"center"} border={"none"} p="0px">
-                  <Box _hover={{ bg: "#d3d3d3" }} alignItems="center" justifyContent={"center"} pt="10px" display={"flex"} m="auto" >
+                <PopoverBody w="100%" m="auto" justifyContent={"center"} textAlign={"center"}
+                 border={"none"} p="0px">
+                  <Box _hover={{ bg: "#d3d3d3" }} alignItems="center" justifyContent={"center"} 
+                  pt="10px" display={"flex"} m="auto" >
                     <Box alignItems="center" justifyContent={"center"} gap={"15px"}  display={"flex"}>
                       <Link to="">
                         <GoCodeReview fontSize={"30px"} />
@@ -614,7 +625,8 @@ function search(){
             <Box >
               <Input onKeyPress={(e)=>{if(e.key=="Enter") search()}} 
              value={searchValue} onChange={(e)=>setSearchValue(e.target.value)}
-               border={"none"} _focus={{ boxShadow: 'none', }} _hover={{ border: 'none' }} placeholder="Search for anything" />
+               border={"none"} _focus={{ boxShadow: 'none', }} _hover={{ border: 'none' }} 
+               placeholder="Search for anything" />
             </Box>
 
             <Box className="search-logo" >

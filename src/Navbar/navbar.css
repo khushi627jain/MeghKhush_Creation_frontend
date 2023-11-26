@@ -13,14 +13,17 @@
 .navbar-new{
     position: fixed;
     top: 0;
-    left: 50%; /* Center the navbar horizontally */
-    transform: translateX(-50%); /* Center the navbar horizontally */
+    /* left: 49%; */
+     /* Center the navbar horizontally */
+    /* transform: translateX(-50%); */
+     /* Center the navbar horizontally */
     width: 100%;
     background-color: #333; /* You can set your desired background color */
     padding: 10px 0;
     z-index: 100; /* This ensures the navbar is above other content */
     background-color: white;
     margin: auto;
+    right: 0;
     
 }
 
