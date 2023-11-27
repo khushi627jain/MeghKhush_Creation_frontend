@@ -74,7 +74,7 @@ const [address,setAddress]=useState({
 useEffect(()=>{
 if(token){ 
     axios
-    .get("https://meghkhush-creation-e6ai.onrender.com/user", {
+    .get("https://megh-khush-creation.vercel.app/user", {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((res) => {
@@ -116,7 +116,7 @@ useEffect(() => {
      let cart=cartArr.filter((ele,idx)=>{
         if(ele._id!=giftId) return ele;
      })
-        axios.patch(`https://meghkhush-creation-e6ai.onrender.com/user/remove/cart/${userId}`,cart,{
+        axios.patch(`https://megh-khush-creation.vercel.app/user/remove/cart/${userId}`,cart,{
             headers: { Authorization: `Bearer ${token}` },
           })
           .catch(err=>console.log(err))
@@ -128,7 +128,7 @@ useEffect(() => {
       let token = localStorage.getItem("token");
     
       if (token) {
-        axios.get("https://meghkhush-creation-e6ai.onrender.com/user", {
+        axios.get("https://megh-khush-creation.vercel.app/user", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => {
@@ -140,7 +140,7 @@ useEffect(() => {
             obj.wishlist.push(arr);
     
             // Patch the updated data
-            axios.patch("https://meghkhush-creation-e6ai.onrender.com/user/wishlist", obj, {
+            axios.patch("https://megh-khush-creation.vercel.app/user/wishlist", obj, {
               headers: { Authorization: `Bearer ${token}` },
             })
             .then((res) => {
@@ -227,7 +227,7 @@ useEffect(() => {
     setCartArr(updatedCartItems)
  
   
-      axios.patch(`https://meghkhush-creation-e6ai.onrender.com/user/quantity/${id}/${newquantity}`,id,
+      axios.patch(`https://megh-khush-creation.vercel.app/user/quantity/${id}/${newquantity}`,id,
       { headers:{Authorization:`Bearer ${token}`}})
       .catch(err=>console.log(err))
     }
@@ -251,7 +251,7 @@ useEffect(() => {
     function handleCheckOut(){
       const newArr=cartArr.filter((ele,idx)=>ele.added==true)
    
-      axios.patch(`https://meghkhush-creation-e6ai.onrender.com/user/order`,newArr,
+      axios.patch(`https://megh-khush-creation.vercel.app/user/order`,newArr,
       { headers:{Authorization:`Bearer ${token}`}})
       .catch(err=>console.log(err))
       onOpen()
@@ -303,7 +303,7 @@ setCartArr(newArr);
       else{
         setShowAlert(false)
         onClose();
-        axios.patch("https://meghkhush-creation-e6ai.onrender.com/user/address",address,{headers:{Authorization:`Bearer ${token}`}})
+        axios.patch("https://megh-khush-creation.vercel.app/user/address",address,{headers:{Authorization:`Bearer ${token}`}})
         .catch(err=>console.log(err))
         .then(res=>{
           toast({

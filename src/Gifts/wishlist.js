@@ -20,7 +20,7 @@ export default function Wishlist(){
 useEffect(()=>{
 if(token){
     axios
-    .get("https://meghkhush-creation-e6ai.onrender.com/user", {
+    .get("https://megh-khush-creation.vercel.app/user", {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((res) => { 
@@ -44,7 +44,7 @@ const userId=usersData._id;
  })
 setwishlistArr(wishlist)
 
-    axios.patch(`https://meghkhush-creation-e6ai.onrender.com/user/remove/wishlist/${userId}`,wishlist,{
+    axios.patch(`https://megh-khush-creation.vercel.app/user/remove/wishlist/${userId}`,wishlist,{
         headers: { Authorization: `Bearer ${token}` },
       })
       .catch(err=>console.log(err))

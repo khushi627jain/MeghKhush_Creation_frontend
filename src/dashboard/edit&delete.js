@@ -27,7 +27,7 @@ export default function EditAndDelete() {
     let debounceTimer;
 
     useEffect(() => {
-        axios.get("https://meghkhush-creation-e6ai.onrender.com/gift", {
+        axios.get("https://megh-khush-creation.vercel.app/gift", {
             params: { page }
         })
             .then(res => {
@@ -50,7 +50,7 @@ export default function EditAndDelete() {
       };
 
     function handleDelete(id) {
-        axios.delete(`https://meghkhush-creation-e6ai.onrender.com/gift/${id}`)
+        axios.delete(`https://megh-khush-creation.vercel.app/gift/${id}`)
         toast({
             duration: 2000,
             isClosable: true,
@@ -104,7 +104,7 @@ onOpen();
     function handleSubmit(){
                     event.preventDefault();
                   
-               axios.patch(`https://meghkhush-creation-e6ai.onrender.com/gift/${Id}`,formData,{headers:{authorization:`Bearer ${token}`}})
+               axios.patch(`https://megh-khush-creation.vercel.app/gift/${Id}`,formData,{headers:{authorization:`Bearer ${token}`}})
                .then(res=>{
               
                 toast({

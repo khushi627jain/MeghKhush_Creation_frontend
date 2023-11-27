@@ -30,7 +30,7 @@ const firstField = useRef()
 const toast = useToast()
 
   useEffect(()=>{
-    axios.get("https://meghkhush-creation-e6ai.onrender.com/gift",{
+    axios.get("https://megh-khush-creation.vercel.app/gift",{
         params:{
             priceType:filterData.priceType,
             price:filterData.price,
@@ -51,7 +51,7 @@ const toast = useToast()
 
 
   useEffect(()=>{
-    axios.get("https://meghkhush-creation-e6ai.onrender.com/gift/all")
+    axios.get("https://megh-khush-creation.vercel.app/gift/all")
     .then(res=>{
 setAllData(res.data.data)
     })
@@ -117,7 +117,7 @@ setFilteredData((prev)=>({
     if (token) {
       // Get user data
       axios
-        .get("https://meghkhush-creation-e6ai.onrender.com/user", {
+        .get("https://megh-khush-creation.vercel.app/user", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => {
@@ -141,7 +141,7 @@ setFilteredData((prev)=>({
   
             // Patch the updated data
             axios
-              .patch("https://meghkhush-creation-e6ai.onrender.com/user/cart", obj, {
+              .patch("https://megh-khush-creation.vercel.app/user/cart", obj, {
                 headers: { Authorization: `Bearer ${token}` },
               })
               .then((res) => {

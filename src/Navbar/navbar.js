@@ -49,7 +49,7 @@ useEffect(()=>{
   const token=localStorage.getItem("token")
   if(token){
     axios
-    .get("https://meghkhush-creation-e6ai.onrender.com/user", {
+    .get("https://megh-khush-creation.vercel.app/user", {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then(res=>{
@@ -79,7 +79,7 @@ useEffect(()=>{
             alert("Please fill all fields");return;
           }
           
-        axios.post("https://meghkhush-creation-e6ai.onrender.com/login",formData)
+        axios.post("https://megh-khush-creation.vercel.app/login",formData)
         .then(res=>{
        
             if(res.status==204){
@@ -159,7 +159,7 @@ useEffect(()=>{
                 )
                 })
                 axios
-                .get("https://meghkhush-creation-e6ai.onrender.com/user", {
+                .get("https://megh-khush-creation.vercel.app/user", {
                   headers: { Authorization: `Bearer ${res.data.token}` },
                 })
                 .then(res=>{
@@ -198,7 +198,7 @@ useEffect(()=>{
   if (email === "" || password === ""||name===""||phone==="") {
       alert("Please fill all fields");return;
     }
-  axios.post("https://meghkhush-creation-e6ai.onrender.com/signup",formData)
+  axios.post("https://megh-khush-creation.vercel.app/signup",formData)
   .then(res=>{
       if(res.data=="Email already exists"){
         toast({

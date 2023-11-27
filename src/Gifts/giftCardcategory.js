@@ -38,7 +38,7 @@ const dispatch=useDispatch();
 
 
 function filterAccordingToType(type){
- axios.get(`https://meghkhush-creation-e6ai.onrender.com/gift`,{
+ axios.get(`https://megh-khush-creation.vercel.app/gift`,{
     params:{
         tags:[type]
     } 

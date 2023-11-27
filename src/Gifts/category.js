@@ -35,7 +35,7 @@ import { Box,Tag, Checkbox, CheckboxGroup, Image, Input,Text, Select,Flex,Button
 
 
 
-        axios.get(`https://meghkhush-creation-e6ai.onrender.com/gift/category/${type}`,{
+        axios.get(`https://megh-khush-creation.vercel.app/gift/category/${type}`,{
             params:{
                 priceType:filterData.priceType,
                 price:filterData.price,
@@ -56,7 +56,7 @@ import { Box,Tag, Checkbox, CheckboxGroup, Image, Input,Text, Select,Flex,Button
     
     
       useEffect(()=>{
-        axios.get("https://meghkhush-creation-e6ai.onrender.com/gift/all")
+        axios.get("https://megh-khush-creation.vercel.app/gift/all")
         .then(res=>{
     setAllData(res.data.data)
         })
@@ -122,7 +122,7 @@ import { Box,Tag, Checkbox, CheckboxGroup, Image, Input,Text, Select,Flex,Button
         if (token) {
           // Get user data
           axios
-            .get("https://meghkhush-creation-e6ai.onrender.com/user", {
+            .get("https://megh-khush-creation.vercel.app/user", {
               headers: { Authorization: `Bearer ${token}` },
             })
             .then((res) => {
@@ -146,7 +146,7 @@ import { Box,Tag, Checkbox, CheckboxGroup, Image, Input,Text, Select,Flex,Button
       
                 // Patch the updated data
                 axios
-                  .patch("https://meghkhush-creation-e6ai.onrender.com/user/cart", obj, {
+                  .patch("https://megh-khush-creation.vercel.app/user/cart", obj, {
                     headers: { Authorization: `Bearer ${token}` },
                   })
                   .then((res) => {

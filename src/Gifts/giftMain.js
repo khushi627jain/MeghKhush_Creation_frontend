@@ -13,7 +13,7 @@ export default function GiftMain(){
   const navigate=useNavigate()
 
 useEffect(()=>{
-    axios.get("https://meghkhush-creation-e6ai.onrender.com/gift/all")
+    axios.get("https://megh-khush-creation.vercel.app/gift/all")
     .then(res=>{
 setArr(res.data.data)
     })

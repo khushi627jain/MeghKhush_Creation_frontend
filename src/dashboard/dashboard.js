@@ -185,7 +185,7 @@ e.preventDefault();
        alert("Please fill all the required fields")
 return;
     }
-    axios.post("https://meghkhush-creation-e6ai.onrender.com/gift",obj,{headers:{Authorization:`Bearer ${token}`}})
+    axios.post("https://megh-khush-creation.vercel.app/gift",obj,{headers:{Authorization:`Bearer ${token}`}})
     .then(res=>{
       toast({
         duration: 2000,

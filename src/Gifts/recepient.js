@@ -11,7 +11,7 @@ const dispatch=useDispatch()
 
 function showFilterThings(occasion,tag,type){
 
-let url="https://meghkhush-creation-e6ai.onrender.com/gift";
+let url="https://megh-khush-creation.vercel.app/gift";
 
 axios.get(url,{
     params:{

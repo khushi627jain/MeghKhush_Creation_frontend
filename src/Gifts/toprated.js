@@ -11,7 +11,7 @@ const navigate=useNavigate();
 const toast = useToast() 
 
 useEffect(()=>{
-    axios.get("https://meghkhush-creation-e6ai.onrender.com/gift/popular")
+    axios.get("https://megh-khush-creation.vercel.app/gift/popular")
     .then(res=>{
 setArr(res.data.data);
     })
@@ -27,7 +27,7 @@ setArr(res.data.data);
     if (token) {
       // Get user data
       axios
-        .get("https://meghkhush-creation-e6ai.onrender.com/user", {
+        .get("https://megh-khush-creation.vercel.app/user", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => {
@@ -51,7 +51,7 @@ setArr(res.data.data);
   
             // Patch the updated data
             axios
-              .patch("https://meghkhush-creation-e6ai.onrender.com/user/cart", obj, {
+              .patch("https://megh-khush-creation.vercel.app/user/cart", obj, {
                 headers: { Authorization: `Bearer ${token}` },
               })
               .then((res) => {

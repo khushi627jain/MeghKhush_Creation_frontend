@@ -19,7 +19,7 @@ export default function GiftDetails() {
 
     useEffect(() => {
 
-        axios.get(`https://meghkhush-creation-e6ai.onrender.com/gift/single/${id}`)
+        axios.get(`https://megh-khush-creation.vercel.app/gift/single/${id}`)
             .then(res => {
                 setArr(res.data.data);
             })
@@ -33,7 +33,7 @@ export default function GiftDetails() {
       let token = localStorage.getItem("token");
     
       if (token) {
-        axios.get("https://meghkhush-creation-e6ai.onrender.com/user", {
+        axios.get("https://megh-khush-creation.vercel.app/user", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => {
@@ -45,7 +45,7 @@ export default function GiftDetails() {
             obj.wishlist.push(arr);
     
             // Patch the updated data
-            axios.patch("https://meghkhush-creation-e6ai.onrender.com/user/wishlist", obj, {
+            axios.patch("https://megh-khush-creation.vercel.app/user/wishlist", obj, {
               headers: { Authorization: `Bearer ${token}` },
             })
             .then((res) => {
@@ -128,7 +128,7 @@ export default function GiftDetails() {
       if (token) {
         // Get user data
         axios
-          .get("https://meghkhush-creation-e6ai.onrender.com/user", {
+          .get("https://megh-khush-creation.vercel.app/user", {
             headers: { Authorization: `Bearer ${token}` },
           })
           .then((res) => {
@@ -150,7 +150,7 @@ export default function GiftDetails() {
     
               // Patch the updated data
               axios
-                .patch("https://meghkhush-creation-e6ai.onrender.com/user/cart", obj, {
+                .patch("https://megh-khush-creation.vercel.app/user/cart", obj, {
                   headers: { Authorization: `Bearer ${token}` },
                 })
                 .then((res) => {

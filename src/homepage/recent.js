@@ -62,7 +62,7 @@ let arr=[
         image:"https://i.imgur.com/msBG6mu.jpg",
         price:335,
         cutOff:678,
-        id:"/64f44d4d281bdbc916c6dba5"
+        id:"64f44d4d281bdbc916c6dba5"
     },
     {
         image:"https://i.imgur.com/szXar4p.jpg",
