@@ -253,7 +253,7 @@ return(
  onChange={(e)=>changePriceType(e)}>
     <option value="asc">Price - Low to High</option>
     <option value="desc">Price - High to Low</option>
-</Select>
+</Select> 
 
 <Text color={"#fa4a6f"} fontSize="xl" fontWeight={"500"} mt="10px" mb="5px" align={"left"}>Price</Text>
         <CheckboxGroup

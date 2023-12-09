@@ -4,7 +4,7 @@ import {
   PopoverCloseButton, Button, ButtonGroup, Box,Stack,InputGroup,InputLeftAddon,InputRightAddon,Select,Textarea,
   PopoverAnchor,useToast,Drawer, DrawerBody,DrawerFooter,  DrawerHeader, DrawerOverlay,DrawerContent,DrawerCloseButton,
  Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton,
-  FormControl, FormLabel, Spacer, useDisclosure, Center
+  FormControl, FormLabel, Spacer, useDisclosure, Center, CheckboxIcon
 } from "@chakra-ui/react";
 import './navbar.css'
 
@@ -17,6 +17,7 @@ import {useDispatch, useSelector} from "react-redux"
 import axios from "axios"
 import {GiHamburgerMenu} from "react-icons/gi" 
 import {MdOutlineSubject} from "react-icons/md"
+import { MdOutlineCheckCircle } from "react-icons/md";
 
 export default function Navbar() {
 
@@ -39,10 +40,19 @@ const toast = useToast()
   const[searchValue,setSearchValue]=useState("")
   const { isOpen, onOpen, onClose } = useDisclosure()
   const[isOpenLoginBox,setIsOpenLoginBox]=useState(false)
+  const[showPd,setShowPd]=useState(false)
+  const[pdvalid,setPdValid]=useState([false,false,false,false,false])
 
   const firstField = React.useRef()
 
-
+  const passwordValidationMessages = [
+    'Password should be at least 8 characters long.',
+    'Password should contain at least one uppercase letter.',
+    'Password should contain at least one lowercase letter.',
+    'Password should contain at least one digit.',
+    'Password should contain at least one special character (!#$%"&*)',
+  ];
+  
 
 useEffect(()=>{
   
@@ -184,7 +194,7 @@ useEffect(()=>{
   const handleClose = () => {
     handleOpenLogin()
     setIsOpen(false);
-    
+    setShowPd(false)
   };
 
   const handleSubmit = (event) => {
@@ -195,7 +205,11 @@ useEffect(()=>{
       password: password,
       phoneNumber: phone,
   };
-  if (email === "" || password === ""||name===""||phone==="") {
+  let pdAnswer=pdvalid[0]&&pdvalid[1]&&pdvalid[2]&&pdvalid[3]&&pdvalid[4]
+  if(!pdAnswer){
+    alert("Please write valid password");return;
+  }
+  if (email === "" || password === ""||name===""||phone===""||pdAnswer) {
       alert("Please fill all fields");return;
     }
   axios.post("https://megh-khush-creation.vercel.app/signup",formData)
@@ -362,6 +376,47 @@ function search(){
 
 } 
 
+function passwordValidation(){
+setShowPd(true)
+}
+
+function setAllPasswordValidation(val){
+  setPassword(val)
+  let arr=pdvalid;let upperCaseCheck=false;
+   let lowerCaseCheck=false; let digitCheck=false;let specialCharCheck=false;
+  for(let i=0;i<val.length;i++){
+    let a=val.charCodeAt(i);
+    if(a>=65&&a<=90){ //uppercase
+      upperCaseCheck=true;
+    }
+    if(a>=97&&a<=122){ //lowercase
+       lowerCaseCheck=true
+    }
+    if(a>=48&&a<=57){
+      digitCheck=true;
+    }
+    if(a>=33&&a<=47){
+      specialCharCheck=true;
+    }
+  }
+ arr[0]= val.length>=8?true:false
+ arr[1] = upperCaseCheck;
+ arr[2]=lowerCaseCheck
+ arr[3]=digitCheck
+ arr[4]=specialCharCheck
+
+ setPdValid(arr)
+ 
+
+}
+
+// function googleVerification(){
+ 
+// 		window.open(
+// 			`https://meghkhushcreation.netlify.app/auth/google/callback`,
+// 			"_self"
+//     )
+// }
 
   return (
     <>
@@ -699,7 +754,23 @@ function search(){
               </FormControl>
               <FormControl id="password" isRequired>
                 <FormLabel>Password:</FormLabel>
-                <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <Input type="password" value={password}  onFocus={()=>passwordValidation()} onChange={(e) => setAllPasswordValidation(e.target.value)} />
+             {showPd&&
+             <Box fontSize={"smaller"} m="10px 0">
+            {
+              passwordValidationMessages.map((ele,idx)=>{
+                return(
+                  <Text color={pdvalid[idx]?"blue":"red"} display={"flex"} alignItems={"center"} gap={"5px"}>
+                  <Box display={pdvalid[idx]?"block":"none"}>
+                  <MdOutlineCheckCircle />
+                  </Box>
+                  {ele}
+                  </Text>
+                )
+              })
+            }
+             </Box>
+             }
               </FormControl>
               <FormControl id="phone" isRequired>
                 <FormLabel>Phone Number:</FormLabel>
@@ -733,10 +804,19 @@ function search(){
                 <FormLabel>Password:</FormLabel>
                 <Input type="password" value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} />
               </FormControl>
+            
+              <Box mt="15px" display={"grid"} m="auto" justifyContent={"center"}>
+              <Button mt="10px" type="submit" colorScheme="blue">Login</Button>
+              {/* <Center><Text>OR</Text></Center>
+              <Center><Button onClick={()=>googleVerification()}>GOOGLE</Button></Center> */}
+
+              </Box>
+           
+           
+            
             </ModalBody>
-            <ModalFooter>
-              <Button type="submit" colorScheme="blue" mr={3}>Login</Button>
-              <Button onClick={handleCloseLogin}>Cancel</Button>
+            <ModalFooter>   
+           
             </ModalFooter>
           </form>
         </ModalContent>
