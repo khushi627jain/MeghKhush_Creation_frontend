@@ -209,7 +209,7 @@ useEffect(()=>{
   if(!pdAnswer){
     alert("Please write valid password");return;
   }
-  if (email === "" || password === ""||name===""||phone===""||pdAnswer) {
+  if (email === "" || password === ""||name===""||phone===""||!pdAnswer) {
       alert("Please fill all fields");return;
     }
   axios.post("https://megh-khush-creation.vercel.app/signup",formData)
