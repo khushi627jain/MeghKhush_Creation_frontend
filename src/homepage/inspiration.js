@@ -21,38 +21,38 @@ Everyday inspiration
         </GridItem>
 
         <GridItem className="recent" colSpan={2} >
-        <Image  borderRadius={"5px"} src="https://i.imgur.com/GhDCY0B.jpg"/>
+        <Image loading='lazy' borderRadius={"5px"} src="https://i.imgur.com/GhDCY0B.jpg"/>
             <Tag className="recent-heart" bg="white" p="10px" ml="4px" mt="-40px" borderRadius={"30px"}>₹ 2901  </Tag>
            {/* <Tag className="recent-heart" bg={"white"} mt="-85%" ml="85%" h="40px" w="40px" bgColor={"white"} borderRadius={"50%"}><TiHeartOutline color="black" fontSize={"30px"}/></Tag> */}
         </GridItem>
 
         
         <GridItem className="recent" colSpan={2}  >
-        <Image borderRadius={"5px"} src="https://i.imgur.com/AusKJEw.jpg"/>
+        <Image loading='lazy' borderRadius={"5px"} src="https://i.imgur.com/AusKJEw.jpg"/>
             <Tag className="recent-heart" bg="white" p="10px" ml="4px" mt="-40px" borderRadius={"30px"}>₹ 3286  </Tag>
            {/* <Tag className="recent-heart" bg={"white"} mt="-85%" ml="85%" h="40px" w="40px" bgColor={"white"} borderRadius={"50%"}><TiHeartOutline color="black" fontSize={"30px"}/></Tag> */}
         </GridItem>
 
         <GridItem className="recent" colSpan={2}>
-        <Image  borderRadius={"5px"} src="https://i.imgur.com/hBHwt7O.jpg"/>
+        <Image loading='lazy' borderRadius={"5px"} src="https://i.imgur.com/hBHwt7O.jpg"/>
             <Tag className="recent-heart" bg="white" p="10px" ml="4px" mt="-40px" borderRadius={"30px"}>₹ 425  </Tag>
            {/* <Tag className="recent-heart" bg={"white"} mt="-85%" ml="85%" h="40px" w="40px" bgColor={"white"} borderRadius={"50%"}><TiHeartOutline color="black" fontSize={"30px"}/></Tag> */}
         </GridItem>
 
         <GridItem className="recent" colSpan={2}>
-        <Image  borderRadius={"5px"} src="https://i.imgur.com/VbwSROY.jpg"/>
+        <Image loading='lazy' borderRadius={"5px"} src="https://i.imgur.com/VbwSROY.jpg"/>
             <Tag className="recent-heart" bg="white" p="10px" ml="4px" mt="-40px" borderRadius={"30px"}>₹ 425  </Tag>
            {/* <Tag className="recent-heart" bg={"white"} mt="-85%" ml="85%" h="40px" w="40px" bgColor={"white"} borderRadius={"50%"}><TiHeartOutline color="black" fontSize={"30px"}/></Tag> */}
         </GridItem>
 
         <GridItem className="recent" colSpan={2}>
-        <Image  borderRadius={"5px"} src="https://i.imgur.com/UApGdI0.jpg"/>
+        <Image loading='lazy'  borderRadius={"5px"} src="https://i.imgur.com/UApGdI0.jpg"/>
             <Tag className="recent-heart" bg="white" p="10px" ml="4px" mt="-40px" borderRadius={"30px"}>₹ 425  </Tag>
            {/* <Tag className="recent-heart" bg={"white"} mt="-85%" ml="85%" h="40px" w="40px" bgColor={"white"} borderRadius={"50%"}><TiHeartOutline color="black" fontSize={"30px"}/></Tag> */}
         </GridItem>
 
         <GridItem className="recent" colSpan={2}>
-        <Image  borderRadius={"5px"} src="https://i.imgur.com/H0qYui3.jpg"/>
+        <Image loading='lazy' borderRadius={"5px"} src="https://i.imgur.com/H0qYui3.jpg"/>
             <Tag className="recent-heart" bg="white" p="10px" ml="4px" mt="-40px" borderRadius={"30px"}>₹ 425  </Tag>
            {/* <Tag className="recent-heart" bg={"white"} mt="-85%" ml="85%" h="40px" w="40px" bgColor={"white"} borderRadius={"50%"}><TiHeartOutline color="black" fontSize={"30px"}/></Tag> */}
         </GridItem>

@@ -263,7 +263,8 @@ export default function GiftDetails() {
                               <div key={idx} style={{backgroundColor:"#fa4a65", position:"relative",display:"flex" ,justifyContent:"center",margin:"auto",alignItems:"center"}}>
                               <Image
                                     src={arr.image[idx]} h={["275px","300px","400px","500px","500px"]} 
-                                     />
+                                loading='lazy'   
+                                />
                               </div>  
                             )
                         })

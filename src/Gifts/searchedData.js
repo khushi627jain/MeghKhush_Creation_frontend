@@ -465,7 +465,8 @@ bgImage={"https://images.unsplash.com/photo-1614850523296-d8c1af93d400?ixlib=rb-
                      key={idx} textAlign={"left"} borderRadius={"10px 10px 0 0"}
                          >
                        <Image 
-                               // w="100%" h="350px" 
+                         // w="100%" h="350px" 
+                         loading='lazy'
                                onClick={()=>{navigate(`/gift/single/${ele._id}`)}}
                                h={["65%","70%"]}
                                 borderRadius={"10px 10px 0px 0px"}  src={ele.image[0]} />

@@ -479,7 +479,7 @@ import { Box,Tag, Checkbox, CheckboxGroup, Image, Input,Text, Select,Flex,Button
             return(
               <div  key={idx} style={{ marginBottom: "40px",marginTop:"20px" , padding: 0,position:"relative" }} >
              
-              <Image h={"350px"} w={"300px"}  onClick={()=>{navigate(`/gift/single/${ele._id}`)}} src={ele.image} />
+              <Image h={"350px"} w={"300px"} loading='lazy' onClick={()=>{navigate(`/gift/single/${ele._id}`)}} src={ele.image} />
             </div>
             )
           
@@ -504,7 +504,7 @@ import { Box,Tag, Checkbox, CheckboxGroup, Image, Input,Text, Select,Flex,Button
                          boxShadow={"rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"} 
                          key={idx} textAlign={"left"} borderRadius={"10px 10px 0 0"} >
                         <Image 
-                               
+                               loading='lazy'
                                 onClick={()=>{navigate(`/gift/single/${ele._id}`)}}
                              
                                 h={["65%","70%"]} 

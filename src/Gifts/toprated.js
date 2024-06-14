@@ -142,7 +142,7 @@ setArr(res.data.data);
                     boxShadow={"rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"}
                        >
 
-                       <Image  onClick={()=>{navigate(`/gift/single/${ele._id}`)}}
+                       <Image  loading='lazy' onClick={()=>{navigate(`/gift/single/${ele._id}`)}}
                     h={["70%","72%"]} 
                              borderRadius={"10px 10px 0px 0px"}  src={ele.image[0]} />
                        <Box p="10px">

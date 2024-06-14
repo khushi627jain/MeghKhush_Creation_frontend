@@ -95,7 +95,7 @@ const navigate=useNavigate()
     arr.map((ele,idx)=>{
         return(
             <Box onClick={()=>(navigate(`/gift/single/${ele.id}`))}  className="recent" key={idx} >
-            <Image className="recent"   
+            <Image loading='lazy' className="recent"   
              borderRadius={"10px"} src={ele.image}/>
             <Tag bg="white" p={["0px","10px"]}  ml={["5px","10px"]} mt={["-28px","-45px"]} borderRadius={"30px"}>{`₹ ${ele.price}`}  &nbsp;<Text textDecoration={"line-through"} >{` ₹ ${ele.cutOff}`}</Text></Tag>
            <Tag  className="recent-heart" mt={["-83%","-80%"]} ml={["70%","80%"]} h={["30px","40px"]} w={["30px","40px"]} bgColor={"white"} borderRadius={"50%"}><TiHeartOutline color="black" fontSize={"30px"}/></Tag>

@@ -211,7 +211,7 @@ onOpen();
                                 const percentageDiscount = ((ele.realPrice - ele.price) / ele.realPrice) * 100;
                                 return (
                                     <GridItem key={idx} textAlign={"left"} >
-                                        <Image
+                                        <Image loading='lazy'
                                             // w="100%" h="350px" 
                                             onClick={() => { navigate(`/gift/single/${ele._id}`) }}
                                             // w={["100%", "100%", "100%", "260px", "320px"]} h={["fit-content", "360px", "380px", "310px", "350px"]}

@@ -9,7 +9,7 @@ export default function Sorry(){
     return(
         <Box fontStyle={"revert-layer"} w="80%" m="150px auto" display={["grid","flex"]} alignItems={"center"} justifyContent={"center"}   >
         <Box m="auto" w="30%">
-            <Image src="https://media.tenor.com/GCAp1T2fAZwAAAAi/sorry-im-sorry.gif" />
+            <Image loading='lazy' src="https://media.tenor.com/GCAp1T2fAZwAAAAi/sorry-im-sorry.gif" />
         </Box>
         <Box m="auto" fontStyle={"revert-layer"} w="70%">
             <Text fontWeight={"500"} 
@@ -26,7 +26,7 @@ export default function Sorry(){
             data-aos="fade-down" data-aos-duration="1000" color="#fa4a65"
             >Feel free to connect with us</Text>
            <a href="https://www.animatedimages.org/cat-lines-562.htm">
-           <Image className="line-style"
+           <Image loading='lazy' className="line-style"
      
            w={["sm","md","xl","2xl","3xl"]}
            m="auto"

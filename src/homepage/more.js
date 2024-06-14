@@ -165,7 +165,7 @@ function handleMouseLeave(id){
                   <video  style={{width:"150px",height:"150px",transition:"transform 1s ease"}} id={ele.id} 
                   onMouseEnter={()=>handleMouseEnter(ele.id)}
                   onMouseLeave={()=>handleMouseLeave(ele.id)} src={ele.video} />: 
-                  <Image w="auto" h={["150px","150px"]}
+                  <Image loading='lazy' w="auto" h={["150px","150px"]}
                   id={ele.id} 
                   style={{transition:"transform 1s ease"}} 
                   onMouseEnter={()=>handleMouseEnter(ele.id)}
@@ -189,7 +189,8 @@ function handleMouseLeave(id){
         <Box w="45%" borderRadius={"30px"} >
   <Box w="100%">
     <Image
-      ml="auto"  
+                ml="auto"  
+                loading='lazy'
       borderBottomLeftRadius={"50%"}
       borderTopLeftRadius={"50%"}
       right={"0px"}
@@ -212,7 +213,7 @@ function handleMouseLeave(id){
         <>
 <Box display={"flex"} w="90%" h="70%" m=" 40px auto" >
 <Box w={["50%","30%"]} >
-    <Image src="https://i.imgur.com/2FeXT1b.jpg" h="100%" />
+    <Image loading='lazy' src="https://i.imgur.com/2FeXT1b.jpg" h="100%" />
 </Box>
 <Box  display={"grid"} alignItems={"center"} w={["50%","70%"]} bg="pink.50"  p={["20px", "30px","0px","0px", "80px"]}  >
         <Heading fontFamily={"serif"} fontSize={["15px", "20px", "30px", "35px", "40px"]}>GET STARTED WITH<Text color="#fa4a65">MEGHKHUSH CREATION</Text></Heading>

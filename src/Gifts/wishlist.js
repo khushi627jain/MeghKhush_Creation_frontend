@@ -68,7 +68,7 @@ setwishlistArr(wishlist)
                    
                        >
                             <Image 
-                                h={["65%","70%"]} 
+                                h={["65%","70%"]}  loading='lazy'
                              borderRadius={"10px 10px 0px 0px"}  src={ele.image[0]} />
                       <Box p="10px">
                       <Box  w={["150px","200px","200px","250px"]}> 

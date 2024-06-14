@@ -474,7 +474,7 @@ return(
         return(
           <div  key={idx} style={{ marginBottom: "40px",marginTop:"20px" , padding: 0,position:"relative" }} >
          
-          <Image h={"350px"} w={"300px"}  onClick={()=>{navigate(`/gift/single/${ele._id}`)}} src={ele.image} />
+          <Image loading='lazy' h={"350px"} w={"300px"}  onClick={()=>{navigate(`/gift/single/${ele._id}`)}} src={ele.image} />
         </div>
         )
       
@@ -501,7 +501,7 @@ return(
                     <Image 
                            
                             onClick={()=>{navigate(`/gift/single/${ele._id}`)}}
-                         
+                         loading='lazy'
                             h={["65%","70%"]} 
                              borderRadius={"10px 10px 0px 0px"}  src={ele.image[0]} />
                       <Box p="10px">

@@ -65,7 +65,7 @@ export default function TodayPicks(){
                     <Box border={"1px solid #B3B6B7"}
                      _hover={{boxShadow: "rgba(0, 0, 0, 0.56) 0px 22px 70px 4px"}}
                       borderRadius={"10px"} pb={["0px","15px"]}  >
-                <Image
+                <Image loading='lazy'
                 id={ele.id} w={"100%"}
         onMouseEnter={()=>handleMouseEnter(ele.id)}
         onMouseLeave={()=>handleMouseLeave(ele.id)}

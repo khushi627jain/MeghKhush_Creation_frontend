@@ -33,7 +33,7 @@ image:"https://i.etsystatic.com/6375862/c/1992/1583/315/263/il/645080/5036340155
         <Text m={"auto"} w="90%" mb="10px" mt="2%" fontSize={"xl"} fontWeight={"500"} align={"left"} >Because you viewed</Text>
         <Box alignItems={"center"} w="90%" m="auto" fontStyle={"revert-layer"} textAlign={"left"} display={["grid","grid","flex"]} gap="10px">
             <Box>
-<Image h="100%" src="https://i.etsystatic.com/16658962/r/il/ff752f/4427816942/il_680x540.4427816942_tr53.jpg"/>
+<Image loading='lazy' h="100%" src="https://i.etsystatic.com/16658962/r/il/ff752f/4427816942/il_680x540.4427816942_tr53.jpg"/>
 <Tag bg="white" p="10px" ml="10px" mt="-45px" borderRadius={"30px"}>₹ 999 </Tag>
             </Box>
             <Box display={"grid"} gridTemplateColumns={["repeat(2,1fr)","repeat(2,1fr)","repeat(3,1fr)"]} >
@@ -41,7 +41,7 @@ image:"https://i.etsystatic.com/6375862/c/1992/1583/315/263/il/645080/5036340155
     arr.map((ele,idx)=>{
         return(
             <Box key={idx}>
-            <Image src={ele.image}/>
+            <Image loading='lazy' src={ele.image}/>
 <Tag bg="white" p="10px" ml="10px" mt="-45px" borderRadius={"30px"}>{`₹ ${ele.price}`}</Tag>
 </Box>
 

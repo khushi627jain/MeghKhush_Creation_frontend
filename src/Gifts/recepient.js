@@ -82,7 +82,7 @@ axios.get(url,{
             arr.map((ele,idx)=>{
                 return(
                     <GridItem onClick={()=>{showFilterThings(ele.occasion,ele.tag,ele.type)}} key={idx} borderRadius={"10px"}  gap="30px" boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px" _hover={{boxShadow:"rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px"}}>
-                            <Image w={["100%"]} h={["170px","180px","250px","350px"]} borderRadius={"10px 0px 0px 10px"}  src={ele.image} />
+                            <Image loading='lazy' w={["100%"]} h={["170px","180px","250px","350px"]} borderRadius={"10px 0px 0px 10px"}  src={ele.image} />
                         <Text w="90%"
                         whiteSpace={"nowrap"}
                         overflow={"hidden"}

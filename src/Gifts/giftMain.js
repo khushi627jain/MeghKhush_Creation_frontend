@@ -82,7 +82,7 @@ setArr(res.data.data)
           <div  key={idx} style={{ margin:0, padding: 0,position:"relative",justifyContent:"center" }} >
           <Tag   top={2} p="10px 20px 10px 20px"
               borderRadius={"20px"}  left={[3,2]} position={"absolute"} zIndex={"1"} display={"flex"} justifyContent={"flex-start"} bg="white"  ><Text>{`₹ ${ele.price}`}</Text></Tag>
-          <Center> <Image onClick={()=>{navigate(`/gift/single/${ele._id}`)}} h={["300px","350px"]} src={ele.image} /></Center>
+          <Center> <Image loading='lazy' onClick={()=>{navigate(`/gift/single/${ele._id}`)}} h={["300px","350px"]} src={ele.image} /></Center>
          
         </div>
           </Center>

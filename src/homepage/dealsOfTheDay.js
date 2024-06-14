@@ -37,7 +37,7 @@ const navigate=useNavigate()
         cursor={"pointer"} onClick={()=>{navigate("gift/category/mantra farme")}}
           pb={["15px", "0px", "0px", "0px", "10px"]}
           borderRadius={"10px"} boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px" >
-          <Image id="image1"
+          <Image id="image1" loading='lazy'
             onMouseEnter={() => handleMouseEnter("image1")}
             onMouseLeave={() => handleMouseLeave("image1")}
             style={{ transition: 'transform 0.2s ease' }}
@@ -55,7 +55,7 @@ const navigate=useNavigate()
           boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
         >
           <Image
-
+loading='lazy'
             h={"80%"} w={"100%"}
             alignItems="center"
             m="auto"
@@ -85,7 +85,7 @@ cursor={"pointer"} onClick={()=>{navigate("gift/category/bouquet")}}
             onMouseEnter={() => handleMouseEnter("image2")}
             onMouseLeave={() => handleMouseLeave("image2")}
             style={{ transition: 'transform 0.2s ease' }}
-
+loading='lazy'
             h={"80%"} w={"100%"}
             alignItems={"center"} m="auto" justifyContent={"center"} mb={["3px", "10px"]} borderRadius={"10px 10px 0px 0px"} src="https://i.imgur.com/5PH04c0.jpg" alt="" />
           <Text pl="13px" fontSize={["smaller", "md"]} color="gray.500">Up to 20% Off on</Text>
@@ -100,7 +100,7 @@ cursor={"pointer"} onClick={()=>{navigate("gift/category/random")}}
             onMouseEnter={() => handleMouseEnter("image3")}
             onMouseLeave={() => handleMouseLeave("image3")}
             style={{ transition: 'transform 0.2s ease' }}
-
+loading='lazy'
             h={"80%"} w={"100%"}
             alignItems={"center"} m="auto" justifyContent={"center"} mb={["3px", "10px"]} borderRadius={"10px 10px 0px 0px"} src="https://i.imgur.com/tMw6obh.jpg" alt="" />
           <Text pl="13px" fontSize={["smaller", "md"]} color="gray.500">Up to 30% Off on</Text>
@@ -116,7 +116,7 @@ cursor={"pointer"} onClick={()=>{navigate("gift/category/resin gifts")}}
             onMouseEnter={() => handleMouseEnter("image4")}
             onMouseLeave={() => handleMouseLeave("image4")}
             style={{ transition: 'transform 0.2s ease' }}
-
+loading='lazy'
             h={"80%"} w={"100%"}
             alignItems={"center"} m="auto" justifyContent={"center"} mb={["3px", "10px"]}
             borderRadius={"10px 10px 0px 0px"} src="https://i.imgur.com/gJgbWXR.jpg" alt="" />
@@ -133,6 +133,7 @@ cursor={"pointer"} onClick={()=>{navigate("gift/category/explosion")}}
             onMouseLeave={() => handleMouseLeave("image5")}
             style={{ transition: 'transform 0.2s ease' }}
             h={"80%"} w={"100%"}
+            loading='lazy'
             alignItems={"center"} m="auto" justifyContent={"center"} mb={["3px", "10px"]} borderRadius={"10px 10px 0px 0px"}
             src="https://i.imgur.com/7EQYHLQ.jpg" alt="" />
           <Text pl="13px" fontSize={["smaller", "md"]} color="gray.500">Up to 10% Off on</Text>

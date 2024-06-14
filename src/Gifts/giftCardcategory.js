@@ -66,7 +66,7 @@ return(
                       display={"flex"} justifyContent={"start"} alignItems={"center"} rowGap="30px" boxShadow= "rgba(0, 0, 0, 0.35) 0px 5px 15px" _hover={{boxShadow:"rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px"}}>
                
                         <Box >
-                            <Image borderRadius={"10px 0px 0px 10px"}
+                            <Image borderRadius={"10px 0px 0px 10px"} loading='lazy'
                               w={["300px","280px","300px"]} h={["180px","300px","210px","250px","250px"]} 
 
                            src={ele.image} />

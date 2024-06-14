@@ -373,7 +373,7 @@ setCartArr(newArr);
                   <Checkbox colorScheme="cyan" onChange={(e)=>checkBoxChange(e,ele)} isChecked={ele.added} ></Checkbox>
                   {/* 1st div -image */}
                   <Box   >
-                  <Image id={`img${idx}`}
+                  <Image id={`img${idx}`} loading='lazy'
                    onMouseEnter={() => handleMouseEnter(`img${idx}`)}
             onMouseLeave={() => handleMouseLeave(`img${idx}`)}
             style={{ transition: 'transform 0.2s ease' }}
