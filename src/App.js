@@ -1,22 +1,19 @@
-
+import React, { Suspense } from 'react';
 import './App.css';
-import Footer from './Footer/footer';
-import Navbar from './Navbar/navbar';
 
-import AllRouter from './Routes/allroute';
-
-
+// Lazy load components
+const Navbar = React.lazy(() => import('./Navbar/navbar'));
+const Footer = React.lazy(() => import('./Footer/footer'));
+const AllRouter = React.lazy(() => import('./Routes/allroute'));
 
 function App() {
-
-
-
   return (
     <div className="App">
-    <Navbar/>
-
-    <AllRouter/>
-    <Footer/>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Navbar />
+        <AllRouter />
+        <Footer />
+      </Suspense>
     </div>
   );
 }
