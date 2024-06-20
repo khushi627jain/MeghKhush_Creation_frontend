@@ -9,8 +9,8 @@ const rotate = keyframes`
 
 // Custom Loader Component
 function CustomLoader() {
-    return (
-      <Box
+  return (
+    <Box
       display="flex"
       alignItems="center"
       justifyContent="center"
@@ -26,21 +26,20 @@ function CustomLoader() {
         display="flex"
         alignItems="center"
         justifyContent="center"
-        width="250px"
-        height="250px"
+        width={["150px", "150px", "200px", "250px"]} // Responsive width
+        height={["150px", "150px", "200px", "250px"]} // Responsive height
         borderRadius="50%" // Making the container circular
         overflow="hidden" // Ensure the image does not overflow the circular container
         animation={`${rotate} 4s linear infinite`} // Applying the rotation animation
       >
-         <Image
+        <Image
           src="https://i.pinimg.com/564x/9b/fc/da/9bfcdadd32dc93fae29b78af252e9f34.jpg"
           alt="Loading"
-          boxSize="250px" // Ensuring the image fits the circular container
+          boxSize="100%" // Ensuring the image fits the circular container
           objectFit="cover" // Ensuring the image covers the entire container
         />
       </Box>
     </Box>
-  
   );
 }
 
