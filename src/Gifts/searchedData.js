@@ -9,6 +9,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import {FaShoppingCart} from "react-icons/fa"
 import {BsArrowUpRightCircleFill} from "react-icons/bs"
+import CustomLoader from "../Components/CustomLoader/customLoader";
 
 export default function Search(){
 
@@ -224,7 +225,7 @@ return(
     <>
 {
   arr.length===0?<>
-<Box 
+{/* <Box 
 fontFamily="sans-serif" 
       bgPosition="center"
       pt="150px" pb="150px"
@@ -235,9 +236,9 @@ bgImage={"https://images.unsplash.com/photo-1614850523296-d8c1af93d400?ixlib=rb-
  </Text>
   <Text fontSize={["2xl"]}>   To ensure an enriching experience, kindly explore other topics by using a more suitable keyword.</Text>
 <Text fontSize={["4xl"]} fontWeight={"600"} fontFamily={"cursive"} color="#fa4a65"> Happy searching!</Text>
-</Box>
+</Box> */}
 
-
+<CustomLoader/>
   </>:(
     <Box mt="100px" fontFamily={"revert-layer"} display={["grid","grid","flex"]} gap="10px" p="10px">
        <Box w={["0","0","30%","30%","21%"]} display={["none","none","block"]}   textAlign={"left"} p="10px">

@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import CustomLoader from '../Components/CustomLoader/customLoader';
 
 const Deals = React.lazy(() => import("./dealsOfTheDay"));
 const Discover = React.lazy(() => import("./discover"));
@@ -13,7 +14,7 @@ const Viewed = React.lazy(() => import("./viewed"));
 
 export default function Homepage() {
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div><CustomLoader/></div>}>
             <Discover />
             <Deals />
             <CommentBox />

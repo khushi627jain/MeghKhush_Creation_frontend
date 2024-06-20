@@ -118,7 +118,7 @@
 }
 .name-tag:hover{
     text-decoration: underline;
-    text-underline-offset: 14px;
+    text-underline-offset: 8px;
 }
 .hidden-box{
     display: none;color: black;

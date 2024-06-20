@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { Box } from "@chakra-ui/react";
+import CustomLoader from "../Components/CustomLoader/customLoader";
 
 const Category = lazy(() => import("./giftCardcategory"));
 const TopRated = lazy(() => import("./toprated"));
@@ -8,12 +9,12 @@ const GiftMain = lazy(() => import("./giftMain"));
 
 export default function Gift() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div><CustomLoader/></div>}>
       <Box m="100px auto">
         <GiftMain />
         <Category />
         <TopRated />
-        <Recepient />
+        {/* <Recepient /> */}
       </Box>
     </Suspense>
   );

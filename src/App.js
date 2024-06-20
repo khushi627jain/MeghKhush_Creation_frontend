@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import './App.css';
+import CustomLoader from './Components/CustomLoader/customLoader';
 
 // Lazy load components
 const Navbar = React.lazy(() => import('./Navbar/navbar'));
@@ -9,7 +10,7 @@ const AllRouter = React.lazy(() => import('./Routes/allroute'));
 function App() {
   return (
     <div className="App">
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div><CustomLoader/></div>}>
         <Navbar />
         <AllRouter />
         <Footer />

@@ -78,14 +78,17 @@ useEffect(()=>{
     setIsOpenLogin(false);
   };
 
-  const handleSubmitLogin = (event) => {
-    event.preventDefault();
+  const handleSubmitLogin = (event,em,pd) => {
+    if(event) {
+       event.preventDefault(); 
+    }
+    
  
         const formData = {
-            email: loginEmail,
-            password: loginPassword,
+            email: em,
+            password: pd,
         };
-        if (loginEmail === "" || loginPassword === "") {
+        if (em === "" || pd === "") {
             alert("Please fill all fields");return;
           }
           
@@ -192,11 +195,22 @@ useEffect(()=>{
   };
 
   const handleClose = () => {
+    // handleOpenLogin()
+    setIsOpen(false);
+    setShowPd(false)
+  };
+ const handleLoginFromSIgnUp = () => {
     handleOpenLogin()
     setIsOpen(false);
     setShowPd(false)
   };
-
+  const handlePhoneChange = (e) => {
+    const value = e.target.value;
+    // Only update the state if the value is numeric and up to 10 digits long
+    if (/^\d*$/.test(value) && value.length <= 10) {
+      setPhone(value);
+    }
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = {
@@ -213,7 +227,8 @@ useEffect(()=>{
       alert("Please fill all fields");return;
     }
   axios.post("https://megh-khush-creation.vercel.app/signup",formData)
-  .then(res=>{
+    .then(res => {
+
       if(res.data=="Email already exists"){
         toast({
         
@@ -241,27 +256,30 @@ useEffect(()=>{
       }
       else 
       {
-        toast({
-        
-          duration: 4000,
-          isClosable: true,
-          render:()=>(
-            <Box
-            style={{
-              backgroundColor: '#fa4a6f', // New background color
-              color: 'white', // New text color
-              borderRadius: '10px', // New border radius
-              padding: '15px 25px',
-              fontStyle:"revert-layer",
-              justifyContent:"center",
-              textAlign:"center",
-              margin:"auto"
-            }}
-          >
-            SUCCESSFULLY SIGNUP
-          </Box>
-        )
-        })
+        // toast({       
+        //   duration: 4000,
+        //   isClosable: true,
+        //   render:()=>(
+        //     <Box
+        //     style={{
+        //       backgroundColor: '#fa4a6f', // New background color
+        //       color: 'white', // New text color
+        //       borderRadius: '10px', // New border radius
+        //       padding: '15px 25px',
+        //       fontStyle:"revert-layer",
+        //       justifyContent:"center",
+        //       textAlign:"center",
+        //       margin:"auto"
+        //     }}
+        //   >
+        //     SUCCESSFULLY SIGNUP
+        //   </Box>
+        // )
+        // })
+    
+        setLoginEmail(email)
+        setLoginPassword(password)
+        handleSubmitLogin(undefined,email,password)
       }
      
       
@@ -428,7 +446,7 @@ function setAllPasswordValidation(val){
              fontSize={["2xl","4xl"]} >
              MeghKhush</Heading>
           </Box>
-          <Box display={["none","none","flex"]} className="searchBar">
+          <Box display={['none','none','flex']} className="searchBar">
             <Box className="search-input-box">
               <Input onKeyPress={(e)=>{if(e.key=="Enter") search()}} value={searchValue}
                onChange={(e)=>setSearchValue(e.target.value)} border={"none"}
@@ -734,8 +752,10 @@ function setAllPasswordValidation(val){
               <Box className="hidden-box"></Box>
 
             </li>
-            {/* 7th Box */}
-            <li 
+              {/* 7th Box */}
+              {
+                !userName &&
+                   <li 
            
             className="main-box">
               <a   onClick={handleOpen} className="name-tag">{userName==""?`Sign Up/Login`:userName}</a>
@@ -748,7 +768,7 @@ function setAllPasswordValidation(val){
           <form onSubmit={handleSubmit}>
             <ModalBody>
               <FormControl id="email" isRequired>
-              <Button colorScheme="blue" mb="10px" onClick={handleClose}>LOGIN</Button>
+              <Button colorScheme="blue" mb="10px" onClick={handleLoginFromSIgnUp}>LOGIN</Button>
                 <FormLabel>Email:</FormLabel>
                 <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
               </FormControl>
@@ -774,7 +794,7 @@ function setAllPasswordValidation(val){
               </FormControl>
               <FormControl id="phone" isRequired>
                 <FormLabel>Phone Number:</FormLabel>
-                <Input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                <Input type="tel" value={phone}  onChange={handlePhoneChange} />
               </FormControl>
               <FormControl id="name" isRequired>
                 <FormLabel>Name:</FormLabel>
@@ -794,7 +814,7 @@ function setAllPasswordValidation(val){
         <ModalContent>
           <ModalHeader>Login</ModalHeader>
           <ModalCloseButton />
-          <form onSubmit={handleSubmitLogin}>
+          <form onSubmit={(e)=>handleSubmitLogin(e,loginEmail,loginPassword)}>
             <ModalBody>
               <FormControl id="loginEmail" isRequired>
                 <FormLabel>Email:</FormLabel>
@@ -807,8 +827,7 @@ function setAllPasswordValidation(val){
             
               <Box mt="15px" display={"grid"} m="auto" justifyContent={"center"}>
               <Button mt="10px" type="submit" colorScheme="blue">Login</Button>
-              {/* <Center><Text>OR</Text></Center>
-              <Center><Button onClick={()=>googleVerification()}>GOOGLE</Button></Center> */}
+         
 
               </Box>
            
@@ -821,7 +840,9 @@ function setAllPasswordValidation(val){
           </form>
         </ModalContent>
       </Modal>
-            </li>
+            </li> 
+              }
+        
             {/* 8th Box */}
             <li className="main-box">
               <a   onClick={()=>navigate("/nameplate")} className="name-tag">NamePlates</a>

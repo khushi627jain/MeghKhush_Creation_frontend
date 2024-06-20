@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { Route, Routes } from "react-router-dom";
+import CustomLoader from '../Components/CustomLoader/customLoader';
 
 // Lazy load route components
 const Gift = React.lazy(() => import("../Gifts/gift"));
@@ -17,7 +18,7 @@ const AllCategory = React.lazy(() => import("../Gifts/category"));
 
 export default function AllRouter() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div><CustomLoader/></div>}>
       <Routes>
         <Route path="/gift" element={<Gift />} />
         <Route path="/" element={<Homepage />} />
