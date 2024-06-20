@@ -1,17 +1,20 @@
-import Category from "./giftCardcategory";
-import TopRated from "./toprated";
-import Recepient from "./recepient";
+import React, { Suspense, lazy } from "react";
 import { Box } from "@chakra-ui/react";
-import GiftMain from "./giftMain";
 
+const Category = lazy(() => import("./giftCardcategory"));
+const TopRated = lazy(() => import("./toprated"));
+const Recepient = lazy(() => import("./recepient"));
+const GiftMain = lazy(() => import("./giftMain"));
 
-export default function Gift(){
-return(
-    <Box m="100px auto">
-    <GiftMain/>
-        <Category/>
-<TopRated/>
-<Recepient/>
-    </Box>
-)
+export default function Gift() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Box m="100px auto">
+        <GiftMain />
+        <Category />
+        <TopRated />
+        <Recepient />
+      </Box>
+    </Suspense>
+  );
 }

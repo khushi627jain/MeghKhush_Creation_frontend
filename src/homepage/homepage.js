@@ -20,7 +20,7 @@ export default function Homepage() {
             <Recent />
             <Order />
             {/* <Viewed /> */}
-            <Inspiration />
+            {/* <Inspiration /> */}
             <SubscribePart />
             <TodayPicks />
             <Rewards />
